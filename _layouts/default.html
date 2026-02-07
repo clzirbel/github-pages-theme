@@ -14,6 +14,20 @@
     <aside class="sidebar">
       <h2>{{ site.title }}</h2>
 
+      <!-- Page-local navigation -->
+        {% if page.toc %}
+        <nav class="page-nav">
+            {% assign headers = content | markdownify | split: '<h2' %}
+            {% for h in headers offset:1 %}
+            {% assign id = h | split:'id="' | last | split:'"' | first %}
+            {% assign text = h | split:'>' | last | split:'<' | first %}
+            <a href="#{{ id }}">{{ text }}</a>
+            {% endfor %}
+        </nav>
+        {% endif %}
+
+      <hr>
+
       <nav class="site-nav">
         <a href="https://clzirbel.github.io/">All GitHub Projects</a>
         <a href="https://github.com/clzirbel">GitHub Profile</a>
@@ -24,14 +38,6 @@
         <a href="https://github.com/clzirbel/investment_return_calculator">GitHub</a>
     </nav>
 
-      <hr>
-
-      <!-- Page-local navigation -->
-      <nav class="page-nav">
-        {% for h in page.toc %}
-          <a href="#{{ h.id }}">{{ h.text }}</a>
-        {% endfor %}
-      </nav>
     </aside>
 
     <!-- Main content -->
