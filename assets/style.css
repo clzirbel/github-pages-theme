@@ -54,13 +54,17 @@ body {
 /* Main content */
 .content {
   margin-left: 260px;
-  padding: 3rem;
+  padding: 1.5rem 3rem 3rem 3rem;
   max-width: 900px;
 }
 
 /* Headings */
 .content h1, .content h2, .content h3 {
   scroll-margin-top: 1rem;
+}
+
+.content h1:first-of-type {
+  margin-top: 0.5rem;  /* smaller space above the first H1 */
 }
 
 /* Responsive */
@@ -83,4 +87,31 @@ body {
 
 .content > #markdown-toc {
   display: none;
+}
+
+/* color new sidebar links like the rest */
+.sidebar #sidebar-toc a {
+  color: #ecf0f1;
+  text-decoration: none;
+  display: block;
+  margin: 0.4rem 0;
+}
+
+.sidebar #sidebar-toc a:hover {
+  text-decoration: underline;
+}
+
+/* reduce toc indentation */
+.sidebar #sidebar-toc ul {
+  padding-left: 0.5rem;   /* reduce indentation for nested levels */
+  list-style: none;        /* remove bullets */
+}
+
+.sidebar #sidebar-toc li {
+  margin-left: 0;          /* remove extra li indentation */
+}
+
+/* alignment with other links */
+.sidebar #sidebar-toc {
+  margin-bottom: 1.5rem;   /* space before generic links */
 }
