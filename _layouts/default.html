@@ -12,11 +12,11 @@
 
     <!-- Sidebar -->
     <aside class="sidebar">
-      <h2>{{ site.title }}</h2>
+        <h2>{{ site.title }}</h2>
 
         {% if page.toc %}
         <nav class="page-nav">
-            {{ content | toc_only }}
+        <!-- TOC will be visually moved here by CSS -->
         </nav>
         {% endif %}
 

@@ -76,27 +76,29 @@ body {
   }
 }
 
-/* Hide TOC in main content */
-.content > ul:first-of-type {
+/* Hide TOC where it appears in the main content */
+.content > ul#markdown-toc {
   display: none;
 }
 
-/* Sidebar TOC styling */
-.page-nav ul {
+/* Show the same TOC in the sidebar */
+.sidebar .page-nav ul#markdown-toc {
+  display: block;
   list-style: none;
   padding-left: 0;
 }
 
-.page-nav li {
-  margin: 0.25rem 0;
+/* Sidebar TOC styling */
+.sidebar .page-nav li {
+  margin: 0.3rem 0;
 }
 
-.page-nav a {
+.sidebar .page-nav a {
   text-decoration: none;
   color: #444;
   font-size: 0.95rem;
 }
 
-.page-nav a:hover {
+.sidebar .page-nav a:hover {
   text-decoration: underline;
 }
