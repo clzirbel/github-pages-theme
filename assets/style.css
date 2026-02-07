@@ -81,8 +81,6 @@ body {
   display: none;
 }
 
-
-
 /* Sidebar-like TOC */
 #markdown-toc {
   position: sticky;    /* sticks when you scroll */
