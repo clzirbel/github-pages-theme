@@ -75,3 +75,28 @@ body {
     padding: 1.5rem;
   }
 }
+
+/* Hide TOC in main content */
+.content > ul:first-of-type {
+  display: none;
+}
+
+/* Sidebar TOC styling */
+.page-nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.page-nav li {
+  margin: 0.25rem 0;
+}
+
+.page-nav a {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.page-nav a:hover {
+  text-decoration: underline;
+}
