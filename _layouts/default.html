@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>{{ site.title }}</h2>
+
+      <nav class="site-nav">
+        <a href="https://clzirbel.github.io/">All GitHub Projects</a>
+        <a href="https://github.com/clzirbel">GitHub Profile</a>
+        <a href="https://www.linkedin.com/in/craig-zirbel-8726a417/">LinkedIn</a>
+        <a href="https://sites.google.com/view/clzirbel/home">Things to Learn</a>
+        <a href="https://bgsu.edu/zirbel">BGSU Faculty Website</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=iEheKzoAAAAJ">Google Scholar List</a>
+        <a href="https://github.com/clzirbel/investment_return_calculator">GitHub</a>
+    </nav>
+
+      <hr>
+
+      <!-- Page-local navigation -->
+      <nav class="page-nav">
+        {% for h in page.toc %}
+          <a href="#{{ h.id }}">{{ h.text }}</a>
+        {% endfor %}
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="content">
+      {{ content }}
+    </main>
+
+  </div>
+</body>
+</html>
