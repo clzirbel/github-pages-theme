@@ -81,24 +81,29 @@ body {
   display: none;
 }
 
-/* Show the same TOC in the sidebar */
-.sidebar .page-nav ul#markdown-toc {
-  display: block;
+
+
+/* Sidebar-like TOC */
+#markdown-toc {
+  position: sticky;    /* sticks when you scroll */
+  top: 1rem;
+  float: right;        /* visually on the right side */
+  width: 18rem;
+  margin-left: 2rem;
+  padding: 1rem;
+  background: #f7f7f7;
+  border-left: 3px solid #ddd;
   list-style: none;
-  padding-left: 0;
 }
 
-/* Sidebar TOC styling */
-.sidebar .page-nav li {
-  margin: 0.3rem 0;
+/* Optional: smaller nested items */
+#markdown-toc ul {
+  list-style: none;
+  padding-left: 1rem;
 }
 
-.sidebar .page-nav a {
+/* TOC links */
+#markdown-toc a {
   text-decoration: none;
   color: #444;
-  font-size: 0.95rem;
-}
-
-.sidebar .page-nav a:hover {
-  text-decoration: underline;
 }
