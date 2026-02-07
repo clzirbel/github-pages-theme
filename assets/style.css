@@ -81,27 +81,6 @@ body {
   display: none;
 }
 
-/* Sidebar-like TOC */
-#markdown-toc {
-  position: sticky;    /* sticks when you scroll */
-  top: 1rem;
-  float: right;        /* visually on the right side */
-  width: 18rem;
-  margin-left: 2rem;
-  padding: 1rem;
-  background: #f7f7f7;
-  border-left: 3px solid #ddd;
-  list-style: none;
-}
-
-/* Optional: smaller nested items */
-#markdown-toc ul {
-  list-style: none;
-  padding-left: 1rem;
-}
-
-/* TOC links */
-#markdown-toc a {
-  text-decoration: none;
-  color: #444;
+.content > #markdown-toc {
+  display: none;
 }
