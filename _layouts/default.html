@@ -16,6 +16,9 @@
         <h2>{{ site.title }}</h2>
 
         <nav class="page-nav" id="sidebar-toc"></nav>
+
+        <hr>
+
         <a href="{{ site.github.repository_url }}">View code on GitHub</a>
 
         <hr>
@@ -24,7 +27,7 @@
             <a href="https://clzirbel.github.io/">All GitHub Projects</a>
             <a href="https://github.com/clzirbel">GitHub Profile</a>
             <a href="https://www.linkedin.com/in/craig-zirbel-8726a417/">LinkedIn</a>
-            <a href="">Resume some day</a>
+            <a href="">Resume (coming soon)</a>
             <a href="https://sites.google.com/view/clzirbel/home">Things to Learn</a>
             <a href="https://bgsu.edu/zirbel">BGSU Faculty Website</a>
             <a href="https://scholar.google.com/citations?hl=en&user=iEheKzoAAAAJ">Google Scholar List</a>
@@ -47,6 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
     sidebar.appendChild(toc.cloneNode(true)); // move a copy into sidebar
   }
 });
+</script>
+
+<span id="copyright" style="display: block; text-align: center;"></span>
+
+<script>
+const year = new Date().getFullYear();
+document.getElementById("copyright").innerHTML = `© ${year} Craig L. Zirbel`;
 </script>
 
 </body>
